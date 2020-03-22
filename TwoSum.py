@@ -13,7 +13,7 @@ Because nums[0] + nums[1] = 2 + 7 = 9,
 return [0, 1].
 """
 from typing import Dict
-class Solution:
+class TwoSum:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         reverse_map: Dict = dict()
         for i, v in enumerate(nums):
