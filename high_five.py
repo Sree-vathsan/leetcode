@@ -24,6 +24,7 @@ For each student, there are at least 5 scores
 """
 from collections import defaultdict
 from statistics import mean
+import heapq
 TOP_N = 5
                 
 class Solution:
