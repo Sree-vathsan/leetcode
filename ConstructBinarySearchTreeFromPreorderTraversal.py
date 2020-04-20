@@ -23,7 +23,6 @@ The values of preorder are distinct.
 #         self.val = x
 #         self.left = None
 #         self.right = None
-from itertools import takewhile, dropwhile
 from typing import List, Tuple
 
 class Solution:
