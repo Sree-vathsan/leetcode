@@ -19,6 +19,8 @@ Then 4 is the first bad version.
 # @param version, an integer
 # @return a bool
 # def isBadVersion(version):
+from typing import Set
+
 
 class Solution:
     def firstBadVersion(self, n):
@@ -27,10 +29,12 @@ class Solution:
         :rtype: int
         """
         left, right = 1, n + 1
+        bad_seen: Set[int] = set()
         while left < right:
             mid = left + (right - left) // 2
-            if isBadVersion(mid):
+            if mid in bad_seen or isBadVersion(mid):
                 right = mid
+                bad_seen.add(mid)
             else:
                 left = mid + 1
         return right if right < n else n
