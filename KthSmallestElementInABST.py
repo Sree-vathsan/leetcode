@@ -39,6 +39,12 @@ You may assume k is always valid, 1 ≤ k ≤ BST's total elements.
 #         self.val = val
 #         self.left = left
 #         self.right = right
+# Definition for a binary tree node.
+# class TreeNode:
+#     def __init__(self, val=0, left=None, right=None):
+#         self.val = val
+#         self.left = left
+#         self.right = right
 class Solution:
     def doInOrder(self, node: TreeNode) -> List[TreeNode]:
         if not node:
@@ -52,7 +58,8 @@ class Solution:
             self.dfs(node.left)
         self._count += 1
         if self._k == self._count:
-            self.result = node   
+            self.result = node
+            return
         if node.right:
             self.dfs(node.right)
         
@@ -64,4 +71,4 @@ class Solution:
         return self.result.val
         # Solution 2
         # in_order: List[TreeNode] = self.doInOrder(root)
-        # return in_order[k-1].val        
+        # return in_order[k-1].val            
