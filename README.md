@@ -23,16 +23,16 @@ heapq.heappush(t) # first element of the iterable is used as key to heapify. def
 heapq.heappop()
 ```
 
-UnionFind
+DisjointUnionFind
 ```
 def find(node: int) -> int:
 	if parent[node] == node:
-	  return node
+  		return node
 	parent[node] = find(parent[node])            
 	return parent[node]
 
 def union(u: int, v: int):
-    v_parent = find(v)
-    u_parent = find(u)
-    parent[v_parent] = u_parent
+	v_parent = find(v)
+	u_parent = find(u)
+	parent[v_parent] = u_parent
 ```
