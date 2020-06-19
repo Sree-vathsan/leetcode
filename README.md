@@ -30,7 +30,7 @@ def find(node: int) -> int:
 	  return node
 	parent[node] = find(parent[node])            
 	return parent[node]
-        
+
 def union(u: int, v: int):
     v_parent = find(v)
     u_parent = find(u)
