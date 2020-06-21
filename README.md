@@ -18,9 +18,10 @@ q.pop(), q.popleft()
 Priority Queue:
 ```
 import heapq
+h = []
 t = (a,b)
-heapq.heappush(t) # first element of the iterable is used as key to heapify. default-smallest element on the top
-heapq.heappop()
+heapq.heappush(h,t) # first element of the iterable is used as key to heapify. default-smallest element on the top
+heapq.heappop(h)
 ```
 
 DisjointUnionFind
