@@ -22,8 +22,12 @@ h = []
 t = (a,b)
 heapq.heappush(h,t) # first element of the iterable is used as key to heapify. default-smallest element on the top
 heapq.heappop(h)
+# nsmallest and nlargest is suggested only for smaller val of n
 heapq.nlargest(k, h)
-heapq.nsmallest(k, h
+heapq.nsmallest(k, h)
+
+arr = [4,2,3,1]
+heapq.heapify(arr)
 ```
 
 DisjointUnionFind
